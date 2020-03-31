@@ -12,6 +12,8 @@ import javax.persistence.Table;
 
 import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -37,6 +39,7 @@ public class Usuario {
 	private String email;
 
 	@Column(name = "usu_senha")
+	@JsonIgnore
 	private String senha;
 
 	@Column(name = "usu_data_cadastro")

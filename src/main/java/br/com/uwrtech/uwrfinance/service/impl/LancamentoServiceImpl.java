@@ -84,7 +84,7 @@ public class LancamentoServiceImpl implements LancamentoService {
 		}
 
 		if (lancamento.getUsuario() == null || lancamento.getUsuario().getId() == null) {
-			throw new RegraNegocioException("Informe um Usuário.");
+			throw new RegraNegocioException("Informe um Usuário válido.");
 		}
 
 		if (lancamento.getValor() == null || lancamento.getValor().compareTo(BigDecimal.ZERO) < 1) {
